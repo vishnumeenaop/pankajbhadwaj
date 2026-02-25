@@ -1,384 +1,222 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>
-      PANKAJ BHARDWAJ WAY2LAAB
+      landing page
     </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet" />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+      *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:&amp;#39;Poppins&amp;#39;,sans-serif;
+}
 
-    body {
-        font-family: &#39;Segoe UI&#39;, Tahoma, Geneva, Verdana, sans-serif;
-        /* Changed Background Color to Green Gradient */
-        background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #065f46 100%);
-        background-size: 200% 200%;
-        animation: gradientShift 15s ease infinite;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        position: relative;
-        overflow-x: hidden;
-    }
+body{
+    min-height:100vh;
+    background:linear-gradient(180deg,#2b2b2b,#000000);
+    color:#ffffff;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    text-align:center;
+    padding:30px 16px;
+}
 
-    @keyframes gradientShift {
-        0%, 100% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-    }
+/* PROFILE IMAGE */
+.profile img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #2b6cff;
+    box-shadow:0 0 25px rgba(0,123,255,.7);
+    margin-bottom:18px;
+}
 
-    .container {
-        max-width: 420px;
-        width: 100%;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-        animation: fadeInUp 0.8s ease-out;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
+/* NAME */
+h1{
+    font-size:20px;
+    color:#58aff;
+    text-transform:uppercase;
+    margin-bottom:14px;
+    text-decoration:underne;
+    text-underline-offset:6px;
+}
 
-    @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+/* MAIN BUTTON */
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:14px 32px;
+    border-radius:40px;
+    font-weight:600;
+    text-decoration:none;
+    margin:12px 0;
+    font-size:16px;
+}
 
-    .profile {
-        position: relative;
-        display: inline-block;
-        margin: 0 auto;
-    }
+/* BLUE BUTTON */
+.btn-blue{
+    background:#1e90ff;
+    color:#fff;
+    box-shadow:0 0 20px rgba(30,144,255,.6);
+}
 
-    .profile-img {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        /* Changed Border Color to Green */
-        border: 3px solid #10b981; 
-        object-fit: cover;
-        background: #fff;
-        /* Changed Shadow Color to Green */
-        box-shadow: 0 0 25px rgba(16, 185, 129, 0.6);
-        display: block;
-    }
+/* GREEN BORDER BUTTON */
+.btn-outline{
+    border:3px solid #2dff6f;
+    color:#ffffff;
+    background:transparent;
+}
 
-    .status-dot {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        width: 18px;
-        height: 18px;
-        /* Changed Dot Color to Green */
-        background: #10b981; 
-        border-radius: 50%;
-        border: 3px solid white;
-        animation: blink 2s ease-in-out infinite;
-    }
+/* HIGHLIGHT TEXT */
+.highlight{
+    color:#ffd700;
+    font-weight:600;
+    margin:14px 0;
+    text-decoration:underline;
+}
 
-    @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.5; }
-    }
+/* SUB TEXT */
+.subtext{
+    color:#ffcc00;
+    font-weight:600;
+    margin:12px 0;
+}
 
-    h1 {
-        /* Changed Text Color to Green */
-        color: #10b981; 
-        font-size: 1.5rem;
-        font-weight: 700;
-        /* Changed Shadow Color to Green */
-        text-shadow: 0 0 15px rgba(16, 185, 129, 0.5); 
-        line-height: 1.3;
-        margin: 4px 0;
-    }
+/* TAGS */
+.tags{
+    margin:14px 0;
+    font-size:14px;
+    font-weight:600;
+}
 
-    .subtitle {
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 0.9rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
-        margin: 4px 0;
-    }
+.tags span{
+    color:#ff3c00;
+    margin:0 6px;
+    text-decoration:underline;
+}
 
-    .subtitle::before {
-        content: &#34;✓&#34;;
-        /* Changed Checkmark Color to Green */
-        color: #10b981; 
-        font-weight: bold;
-        font-size: 1rem;
-    }
+/* FOOTER TEXT */
+.footer-text{
+    margin-top:14px;
+    font-weight:600;
+    color:#ffa500;
+}
 
-    .badges {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 4px 0;
-    }
+/* DISCLAIMER */
+.disclaimer{
+    font-size:12px;
+    color:#dddddd;
+    margin-top:25px;
+    line-height:1.4;
+}
 
-    .badge {
-        /* Changed Badge Background to Green Tint */
-        background: rgba(16, 185, 129, 0.2); 
-        /* Changed Badge Text Color to Green */
-        color: #10b981; 
-        padding: 6px 16px;
-        border-radius: 20px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        /* Changed Badge Border to Green */
-        border: 1px solid rgba(16, 185, 129, 0.35); 
-    }
+/* SPONSORED */
+.sponsored{
+    margin-top:18px;
+    font-size:13px;
+    opacity:.85;
+}
 
-    .telegram-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        /* Changed Button Gradient to Green */
-        background: linear-gradient(135deg, #10b981 0%, #059669 100%); 
-        color: #ffffff;
-        padding: 14px 32px;
-        border-radius: 30px;
-        font-weight: 700;
-        font-size: 1rem;
-        /* Changed Shadow to Green */
-        box-shadow: 0 4px 20px rgba(16, 185, 129, 0.5); 
-        transition: all 0.3s ease;
-        text-decoration: none;
-        margin: 8px 0;
-    }
+.sponsored strong{
+    display:block;
+    font-size:16px;
+    color:#58a6ff;
+    margin-top:4px;
+}
 
-    .telegram-btn:hover {
-        transform: translateY(-2px);
-        /* Changed Hover Shadow */
-        box-shadow: 0 6px 30px rgba(16, 185, 129, 0.7); 
-    }
-
-    .features {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin: 8px 0;
-    }
-
-    .feature-card {
-        /* Changed Card Background to Dark Green Tint */
-        background: rgba(6, 78, 59, 0.6); 
-        color: #ffffff;
-        backdrop-filter: blur(10px);
-        border-radius: 14px;
-        padding: 14px 16px;
-        display: flex;
-        gap: 14px;
-        align-items: center;
-        /* Changed Card Border to Green */
-        border: 1px solid rgba(16, 185, 129, 0.3); 
-        transition: all 0.3s ease;
-        text-align: left;
-    }
-
-    .feature-card:hover {
-        /* Changed Hover Border */
-        border-color: #10b981; 
-        /* Changed Hover Shadow */
-        box-shadow: 0 0 15px rgba(16, 185, 129, 0.35); 
-        transform: translateY(-2px);
-    }
-
-    .feature-icon {
-        font-size: 2rem;
-        flex-shrink: 0;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* Changed Icon Background to Green Tint */
-        background: rgba(16, 185, 129, 0.2); 
-        border-radius: 12px;
-    }
-
-    .feature-content {
-        flex: 1;
-    }
-
-    .feature-content h3 {
-        font-size: 0.95rem;
-        font-weight: 700;
-        margin-bottom: 4px;
-        color: #ffffff;
-        line-height: 1.3;
-    }
-
-    .feature-content p {
-        font-size: 0.8rem;
-        color: rgba(255, 255, 255, 0.75);
-        line-height: 1.4;
-        margin: 0;
-    }
-
-    /* Footer Section kept exact same color (Blue) as per instruction */
-    .footer-banner {
-        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); 
-        border-radius: 14px;
-        padding: 14px 16px;
-        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4); 
-        margin-top: 8px;
-    }
-
-    .footer-banner h2 {
-        color: #ffffff;
-        font-size: 0.95rem;
-        font-weight: 700;
-        margin-bottom: 4px;
-        line-height: 1.3;
-    }
-
-    .footer-banner p {
-        color: rgba(255, 255, 255, 0.95);
-        font-size: 0.75rem;
-        margin: 0;
-    }
-
-    @media (max-width: 480px) {
-        .container {
-            gap: 14px;
-        }
-
-        h1 {
-            font-size: 1.3rem;
-        }
-
-        .subtitle {
-            font-size: 0.85rem;
-        }
-
-        .telegram-btn {
-            padding: 12px 28px;
-            font-size: 0.95rem;
-        }
-
-        .feature-card {
-            padding: 12px 14px;
-        }
-
-        .feature-icon {
-            width: 45px;
-            height: 45px;
-            font-size: 1.8rem;
-        }
-
-        .feature-content h3 {
-            font-size: 0.9rem;
-        }
-
-        .feature-content p {
-            font-size: 0.75rem;
-        }
-    }
+/* LINKS RESET */
+a{
+    color:inherit;
+    text-decoration:none;
+}
     </style>
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2322314794917875');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2322314794917875&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
   </head>
   <body>
-    <div class="container">
+    <main>
+      <!-- PROFILE -->
       <div class="profile">
-        <img src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/10/new-pk-img-e1760670398527.jpg" alt="Profile" class="profile-img" />
-        <div class="status-dot">
-        </div>
-      </div>
-      <h1>
-        PANKAJ BHARDWAJ
-        <br />
-        WAY2LAAB
-      </h1>
-      <div class="subtitle">
-        Trusted by thousands of traders
-      </div>
-      <div class="badges">
-        <span class="badge">        24/7 Updates
-</span>
-        <span class="badge">        Free to Join
-</span>
-      </div>
-      <a href="https://t.me/+MAt1MODxgadmMmY1" class="telegram-btn">      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.894 8.927c-.141.637-.516.793-1.046.494l-2.888-2.13-1.393 1.34c-.154.154-.283.283-.581.283l.207-2.958 5.338-4.824c.232-.207-.051-.322-.36-.115L8.893 13.617l-2.846-.891c-.619-.194-.632-.619.13-.916l11.12-4.286c.516-.194.968.115.799.916z">
-        </path>
-      </svg>
-      Join on Telegram
+        <a href="https://t.me/+MAt1MODxgadmMmY1">        <img src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/10/new-pk-img-e1760670398527.jpg" />
 </a>
-      <div class="features">
-        <div class="feature-card">
-          <div class="feature-icon">
-            📊
-          </div>
-          <div class="feature-content">
-            <h3>
-              Market Insights &amp; Analysis
-            </h3>
-            <p>
-              Real-time market updates and expert discussions
-            </p>
-          </div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            📚
-          </div>
-          <div class="feature-content">
-            <h3>
-              Learn Trading Strategies
-            </h3>
-            <p>
-              Investment | Share Market | Trading guidance
-            </p>
-          </div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            ⚡
-          </div>
-          <div class="feature-content">
-            <h3>
-              Practical Tips &amp; Tricks
-            </h3>
-            <p>
-              Actionable strategies and proven methods
-            </p>
-          </div>
-        </div>
       </div>
-      <div class="footer-banner">
-        <h2>
-          ⭐ Advertised by Adskillagency ⭐
-        </h2>
-        <p>
-          Telegram Id { For Advertising } - @Adskillagency
-        </p>
+      <!-- NAME -->
+      <h1>
+        Pankaj  Bhardwaj
+      </h1>
+      <!-- BUTTON 1 -->
+      <a href="https://t.me/+MAt1MODxgadmMmY1" class="btn btn-blue">      JOIN FREE LEARNING GROUP
+</a>
+      <!-- CATEGORY -->
+      <div class="highlight">
+        INTRADAY | OPTIONS | SWING | ANALYSIS
       </div>
-    </div>
+      <!-- BUTTON 2 -->
+      <a href="https://t.me/+MAt1MODxgadmMmY1" class="btn btn-outline">      JOIN FREE LEARNING GROUP
+</a>
+      <!-- SUB TEXT -->
+      <div class="subtext">
+        High Accuracy Signals | Real-Time Updates
+      </div>
+      <!-- TAGS -->
+      <div class="tags">
+        <span>        NIFTY 50
+</span>
+        |
+        <span>        BANKNIFTY
+</span>
+        |
+        <span>        INTRADAY
+</span>
+        |
+        <span>        OPTIONS
+</span>
+        |
+        <span>        SWING TRADE
+</span>
+      </div>
+      <div class="footer-text">
+        Learn, Analyse &amp; Grow
+      </div>
+      <!-- SPONSORED -->
+      <a href="https://t.me/+m-ShYwHUK0Y3NmY1" style="text-decoration:none;color:inherit;">      <div class="sponsored">
+        Sponsored by
+        <strong>        Ad Skill agency
+</strong>
+      </div>
+</a>
+      <!-- DISCLAIMER -->
+      <div class="disclaimer">
+        <strong>        Disclaimer:
+</strong>
+        This content is for educational purposes only and does not constitute financial advice.
+Trading involves risk. Please do your own research before making investment decisions.
+      </div>
+      <!-- Meta Pixel Code -->
+      <script>
+        !function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version=&#39;2.0&#39;;
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,&#39;script&#39;,
+&#39;https://connect.facebook.net/en_US/fbevents.js&#39;);
+fbq(&#39;init&#39;, &#39;4269451226675701&#39;);
+fbq(&#39;track&#39;, &#39;PageView&#39;);
+      </script>
+      <noscript>
+        &lt;img height=&#34;1&#34; width=&#34;1&#34; style=&#34;display:none&#34;
+src=&#34;https://www.facebook.com/tr?id=4269451226675701&amp;ev=PageView&amp;noscript=1&#34;
+/&gt;
+      </noscript>
+      <!-- End Meta Pixel Code -->
+    </main>
   </body>
 </html>
